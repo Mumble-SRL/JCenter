@@ -42,10 +42,6 @@ task sourcesJar(type: Jar) {
 task javadoc(type: Javadoc) {
     source = android.sourceSets.main.java.srcDirs
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-    exclude "mumble/mburger/sdk/MBAdmin/Readme.md"
-	exclude "mumble/mburger/sdk/MBAuth/Readme.md"
-	exclude "mumble/mburger/sdk/MBPay/Readme.md"
-	exclude "mumble/mburger/sdk/MBPush/Readme.md"
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
